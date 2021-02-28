@@ -5,7 +5,7 @@
       <div class="base-info">
         <div class="left">
           <van-image round :src="userinfo.photo" fit="cover" class="avatar" />
-          <span class="name">{{ userinfo.username }}</span>
+          <span class="name">{{ userinfo.name }}</span>
         </div>
         <div class="right">
           <van-button size="mini" round>编辑资料</van-button>
@@ -76,6 +76,7 @@ export default {
     }
   },
   created () {
+    //   如果用户登录了,则请求加载用户信息数据
     if (this.user) {
       this.loadUserInfo()
     }

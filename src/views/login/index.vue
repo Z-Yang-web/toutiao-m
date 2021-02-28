@@ -76,8 +76,8 @@ export default {
     // 这里存放数据
     return {
       user: {
-        mobile: '',
-        code: ''
+        mobile: '17596578323',
+        code: '246810'
       },
       userFormRules: {
         mobile: [
@@ -113,14 +113,14 @@ export default {
         const { data } = await login(this.user)
         this.$store.commit('setUser', data.data)
         this.$toast.success('登录成功')
-        this.$route.push('/my')
+        this.$router.push('/my')
       } catch (err) {
-        // if (err.response.status === 400) {
-        //   this.$toast.fail("手机号或者验证码错误");
-        // } else {
-        //   this.$toast.fail("登录失败，请稍候重试");
-        // }
-        console.log(err)
+        if (err.response.status === 400) {
+          this.$toast.fail('手机号或者验证码错误')
+        } else {
+          this.$toast.fail('登录失败，请稍候重试')
+        }
+        // console.log(err);
       }
     },
     async onSendSms () {

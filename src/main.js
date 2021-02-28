@@ -7,7 +7,8 @@ import Vant from 'vant'
 // 加载vant全局样式
 import 'vant/lib/index.css'
 import 'amfe-flexible'
-
+// 初始化时间格式
+import './utils/dayjs'
 Vue.config.productionTip = false
 // 注册并使用vant
 Vue.use(Vant)
