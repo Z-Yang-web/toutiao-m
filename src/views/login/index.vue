@@ -111,6 +111,7 @@ export default {
       // 3,提交表单请求登录
       try {
         const { data } = await login(this.user)
+        console.log(data)
         this.$store.commit('setUser', data.data)
         this.$toast.success('登录成功')
         this.$router.push('/my')

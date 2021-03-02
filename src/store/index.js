@@ -15,7 +15,8 @@ export default new Vuex.Store({
       // 为了防止页面刷新数据丢失,我们需要把数据加载到本地存储
       // window.localStorage.setItem(TOKEN_KEY, JSON.stringify(user))
       setItem(TOKEN_KEY, state.user)
-      // localStorage只能存储字符串, 所以通过stringify将user对象转换为json形式的字符串, 再存储到localStorage
+      // localStorage只能存储字符串,
+      // 所以通过stringify将user对象转换为json形式的字符串, 再存储到localStorage
     }
   },
   actions: {},

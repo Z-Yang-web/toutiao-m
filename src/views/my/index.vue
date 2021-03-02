@@ -56,7 +56,7 @@
       class="logout-cell"
       clickable
       title="退出登录"
-      @click="onLOgout"
+      @click="onLogout"
     />
     <!-- 退出的弹框 -->
   </div>
@@ -83,7 +83,7 @@ export default {
   },
   // 方法集合
   methods: {
-    onLOgout () {
+    onLogout () {
       this.$dialog
         .confirm({
           title: '确认退出吗?'
@@ -103,7 +103,7 @@ export default {
         const { data } = await getUserInfo()
         this.userinfo = data.data
       } catch (error) {
-        //   失败提示用户
+        // 失败提示用户
         this.$toast('获取数据失败,请稍后重试!')
       }
     }

@@ -9,8 +9,9 @@
         icon="search"
         type="info"
         round
-        >搜索
-      </van-button>
+        to="search"
+        >搜索 </van-button
+      >,
     </van-nav-bar>
     <!-- 频道列表 -->
     <van-tabs class="channel-tabs" v-model="active" animated swipeable>
